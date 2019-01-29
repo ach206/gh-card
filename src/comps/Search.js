@@ -9,12 +9,12 @@ searchQuery = (q) => {
     if(q){
         this.setState({query: q});
     } else {
-        this.setState({query: ''})
+        this.setState({query: ''});
     }
 }
     render() {
         return (
-            <div>
+            <div className="search">
             
                 <input 
                 className="searchInput"
