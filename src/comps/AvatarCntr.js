@@ -5,7 +5,7 @@ class AvatarCntr extends Component {
     render() {
         return (
             <div className="avatar">
-                <img src={Octocat} alt="Octocat" />
+                <img src={this.props.avatar} alt={this.props.name} />
             </div>
         );
     }

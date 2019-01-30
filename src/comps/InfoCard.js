@@ -7,10 +7,10 @@ class InfoCard extends Component {
     render() {
         return (
             <div className="infoCard">
-                <p>User: James Bodwin </p>
+                <p>User: {this.props.name} </p>
                 {/* <p>User: {this.props.currentUser}</p> */}
-                <p>Location: Seattle, WA</p>
-                <p>Repos: 22</p>
+                <p>Location: {this.props.location}</p>
+                <p>Repos: {this.props.repos}</p>
             </div>
         );
     }
