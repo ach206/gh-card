@@ -8,6 +8,9 @@ state = {
 searchQuery = (q) => {
     if(q){
         this.setState({query: q});
+        //get results from api
+        //then send result to CB function 
+        //this.props.updateUser()
     } else {
         this.setState({query: ''});
     }
