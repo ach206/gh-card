@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 class InfoCard extends Component {
+    state = {
+
+    }
     render() {
         return (
             <div className="infoCard">
