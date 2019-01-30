@@ -14,6 +14,3 @@ export const getUser = (login) =>
 fetch(`${prefix}/users/${login}`, {headers})
     .then(res => res.json())
 
-// ?access_token = OAUTH - TOKEN
-
-// Accept: application / vnd.github.v3 + json

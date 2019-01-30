@@ -17,6 +17,7 @@ searchQuery = (q) => {
         this.fetchUsers(q)
     } else {
         this.setState({query: ''});
+        this.props.updateUser(null)
     }
 }
 fetchUsers = (q) => {

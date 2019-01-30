@@ -8,14 +8,18 @@ import * as GhAPI from '../data/ghAPI.js';
 class Card extends Component {
 
     state= {
-        currentUser: '',
+        currentUser: null,
     }
 
     updateUserData = (q) => {
-        GhAPI.searchUsers(q).then((res) => {
-            console.log(res);
-        })
-        this.setState({currentUser: q})
+        if (q != null){
+            GhAPI.searchUsers(q).then((res) => {
+                console.log(res);
+            })
+            this.setState({currentUser: q})
+        } else {
+            this.setState({currentUser: null})
+        }
         //sets currentUser based off search results
     }
 
