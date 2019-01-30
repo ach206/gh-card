@@ -6,8 +6,12 @@ const headers = {
     'Authorization': token+' OAUTH-TOKEN',
 }
 
-export const getUser = (q) =>
-fetch(`${prefix}/search/users?q=${q}`, {headers})
+export const searchUsers = (q) =>
+    fetch(`${prefix}/search/users?q=${q}`, {headers})
+    .then(res => res.json())
+
+export const getUser = (login) =>
+fetch(`${prefix}/users/${login}`, {headers})
     .then(res => res.json())
 
 // ?access_token = OAUTH - TOKEN

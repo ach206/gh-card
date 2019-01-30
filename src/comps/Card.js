@@ -12,7 +12,7 @@ class Card extends Component {
     }
 
     updateUserData = (q) => {
-        GhAPI.getUser(q).then((res) => {
+        GhAPI.searchUsers(q).then((res) => {
             console.log(res);
         })
         this.setState({currentUser: q})
