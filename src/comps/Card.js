@@ -19,7 +19,9 @@ class Card extends Component {
         let result = [];
         let fResult = [];
         let login = "";
-        if (q != null){
+        let validQ = this.checkForNullSpace(q);
+        if (validQ === false ){
+
             GhAPI.searchUsers(q).then((res) => {
                 result = res.items;
                     if(result.length > 0){
@@ -33,7 +35,13 @@ class Card extends Component {
             })
             this.setState({currentUser: q})
         } else {
-            this.setState({currentUser: null})
+            this.setState({
+                currentUser: 'octocat',
+                name: 'The Octocat',
+                location: 'San Francisco',
+                repos: 8,
+                avatar: 'https://avatars3.githubusercontent.com/u/583231?v=4'
+            })
         }
         //sets currentUser based off search results
     }
@@ -54,6 +62,15 @@ class Card extends Component {
             })
         }
     }
+
+    checkForNullSpace(q) {
+        return (q == null || q === "" || !/\S/.test(q));
+    }
+
+    // checkfor(q) {
+    //     return (q == null || !/\S/.test(q));
+    // }
+    
     render() {
         return (
             <div className="card-container">
