@@ -8,11 +8,11 @@ import * as GhAPI from '../data/ghAPI.js';
 class Card extends Component {
 
     state = {
-        currentUser: null,
-        name: '',
-        location: '',
-        repos: 0,
-        avatar: ''
+        currentUser: 'octocat',
+        name: 'The Octocat',
+        location: 'San Francisco',
+        repos: 8,
+        avatar: 'https://avatars3.githubusercontent.com/u/583231?v=4'
     }
 
     updateUserData = (q) => {

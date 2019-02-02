@@ -1,5 +1,7 @@
+
 const prefix = `https://api.github.com`;
-const token = `7b437fd9f08e68b41b15763bb3f57a027fb18217`;
+const token = process.env.REACT_APP_GITSOCIAL_API_KEY;
+
 
 const headers = {
     'Accept': 'application/vnd.github.v3+json',

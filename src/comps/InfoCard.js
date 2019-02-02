@@ -15,5 +15,10 @@ class InfoCard extends Component {
         );
     }
 }
+InfoCard.defaultProps = {
+    name: 'The Octocat',
+    location: 'San Francisco',
+    repos: 8
+};
 
 export default InfoCard;

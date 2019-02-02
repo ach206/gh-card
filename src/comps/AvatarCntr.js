@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Octocat from '../images/GitHub-Mark.png';
 
 class AvatarCntr extends Component {
     render() {
@@ -10,5 +9,8 @@ class AvatarCntr extends Component {
         );
     }
 }
+AvatarCntr.defaultProps = {
+    avatar: "https://avatars3.githubusercontent.com/u/583231?v=4"
 
+};
 export default AvatarCntr;
