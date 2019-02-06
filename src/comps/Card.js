@@ -24,13 +24,20 @@ class Card extends Component {
 
             GhAPI.searchUsers(q).then((res) => {
                 result = res.items;
-                    if(result.length > 0){
-                        fResult = result[0]
-                        login = fResult.login
-                        this.getUserInfo(login)
-                    } else {
-                        // sorry no results
-                    }
+                if (res.total_count === 0) {
+                    this.setState({
+                        currentUser: 'octocat',
+                        name: 'The Octocat',
+                        location: 'San Francisco',
+                        repos: 8,
+                        avatar: 'https://avatars3.githubusercontent.com/u/583231?v=4'
+                    })
+                }
+                else {
+                    fResult = result[0]
+                    login = fResult.login
+                    this.getUserInfo(login)
+                }
 
             })
             this.setState({currentUser: q})

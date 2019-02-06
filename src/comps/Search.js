@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { debounce } from "debounce";
+import { debounce } from 'throttle-debounce';
 
 
 class Search extends Component {
@@ -7,7 +7,8 @@ state = {
     query: '',
 }
 componentDidMount() {
-    this.fetchUsers = debounce(this.fetchUsers, 2000)
+    // this.fetchUsers = debounce(this.fetchUsers, 2000)
+    this.fetchUsers = debounce(2000, this.fetchUsers)
 }
 searchQuery = (q) => {
     if(q){
