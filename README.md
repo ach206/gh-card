@@ -4,7 +4,7 @@ Bands On Demand: a React based single page application
 User Interface built with React, designed by Camille Hall. With real time Google Maps API and Foursquare API data
 
 ## See live demo
-[Link to a live demo](https://ach206.github.io/bands-on-demand/)
+[Link to a live demo](https://gh-git-social.herokuapp.com/)
 
 ## How to get this repo
 1) Download ZIP file or clone the repo:
@@ -29,6 +29,8 @@ And then visit localhost:5000
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 GitHub API from [GitHub API](https://developer.github.com/v3/).
+
+Debounce from [NPM Debounce](https://www.npmjs.com/package/throttle-debounce)
 
 
 ## Contributing
