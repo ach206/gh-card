@@ -1,7 +1,7 @@
 
-Bands On Demand: a React based single page application
+Social Card: built with React.js, designed by Camille
 ======================================================
-User Interface built with React, designed by Camille Hall. With real time Google Maps API and Foursquare API data
+
 
 ## See live demo
 [Link to a live demo](https://gh-git-social.herokuapp.com/)
